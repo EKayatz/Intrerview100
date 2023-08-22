@@ -132,33 +132,6 @@ export const getQuestionDetails = async (id: string) => {
     throw error;
   }
 };
-
-// const createUser = ({
-//   name,
-//   email,
-//   description,
-//   bannerUrl,
-//   avatarUrl,
-//   githubUrl,
-//   linkedinUrl,
-// }: VariableProps) => {
-//   client.setHeader("x-api-key", apiKey);
-
-//   const variables = {
-//     input: {
-//       name: name,
-//       email: email,
-//       description: description,
-//       bannerUrl: bannerUrl,
-//       avatarUrl: avatarUrl,
-//       githubUrl: githubUrl,
-//       linkedinUrl: linkedinUrl,
-//     },
-//   };
-
-//   return makeGraphQLRequest(createUserMutation, variables);
-// };
-
 export const createUser = (name: string, email: string, avatarUrl: string) => {
   client.setHeader("x-api-key", apiKey);
 
