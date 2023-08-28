@@ -15,7 +15,7 @@ export interface QuestionForm {
 export type UserForm = {
   name: string;
   description: string;
-  //bannerUrl: string;
+  bannerUrl: string;
   avatarUrl: string;
   githubUrl: string;
   linkedinUrl: string;
@@ -24,7 +24,7 @@ export type UserForm = {
 export type ProfileForm = {
   name: string;
   description: string;
-  // bannerUrl: string;
+  bannerUrl: string;
   avatarUrl: string;
   githubUrl: string;
   linkedinUrl: string;
@@ -58,7 +58,7 @@ export interface UserProfile {
   name: string;
   email: string;
   description: string | null;
-  //bannerUrl: string | null;
+  bannerUrl: string | null;
   avatarUrl: string;
   githubUrl: string | null;
   linkedinUrl: string | null;
@@ -79,7 +79,7 @@ export interface SessionInterface extends Session {
     name: string;
     email: string;
     description: string;
-    //bannerUrl: string;
+    bannerUrl: string;
     avatarUrl: string;
     githubUrl: string;
     linkedinUrl: string;

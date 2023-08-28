@@ -6,7 +6,7 @@ const User = g
     name: g.string().length({ min: 2, max: 100 }),
     email: g.string().unique(),
     avatarUrl: g.url(),
-    bannerUrl: g.string(),
+    bannerUrl: g.string().optional(),
     description: g.string().length({ min: 2, max: 1000 }).optional(),
     githubUrl: g.string().optional(),
     linkedinUrl: g.string().optional(),

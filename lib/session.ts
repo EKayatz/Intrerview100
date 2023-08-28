@@ -64,6 +64,7 @@ export const authOptions: NextAuthOptions = {
         };
         console.log("userdata***", userExists, "end");
         if (!userExists.user) {
+          console.log("waiting for user creation");
           await createUser(
             user.name as string,
             user.email as string,

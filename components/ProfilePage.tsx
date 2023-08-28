@@ -9,8 +9,9 @@ type Props = {
 };
 
 const ProfilePage = ({ user }: Props) => {
-  const backgroundImage =
-    "url('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
+  const backgroundImage = user?.bannerUrl
+    ? `url('${user?.bannerUrl}')`
+    : "url('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
 
   console.log(user?.questions?.edges, "BannerURl");
 
@@ -31,26 +32,20 @@ const ProfilePage = ({ user }: Props) => {
           />
           <div className="flex flex-col gap-2">
             <p className="text-4xl font-bold mt-[7rem]">{user?.name}</p>
-            <p className="text-xl">
-              {user?.description ? `${user?.description}` : <div></div>}
-            </p>
+            {user?.description && <p className="text-xl">{user.description}</p>}
             <div className="flex text-regular">
-              <p>
-                {user?.githubUrl ? (
-                  <Link className="pr-5" href={user?.githubUrl}>
-                    GitHub
-                  </Link>
-                ) : (
-                  <div></div>
-                )}
-              </p>
-              <p>
-                {user?.linkedinUrl ? (
-                  <Link href={user?.linkedinUrl}>LinkedIn</Link>
-                ) : (
-                  <div></div>
-                )}
-              </p>
+              {user?.githubUrl ? (
+                <Link className="pr-5" href={user?.githubUrl}>
+                  GitHub
+                </Link>
+              ) : (
+                <div></div>
+              )}
+              {user?.linkedinUrl ? (
+                <Link href={user?.linkedinUrl}>LinkedIn</Link>
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>

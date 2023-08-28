@@ -13,8 +13,6 @@ const UserProfile = async ({ params }: Props) => {
     user: UserProfile;
   };
 
-  console.log("bannerUrl", result?.user);
-
   if (!result?.user)
     return <p className="no-result-text">Failed to fetch user info</p>;
 

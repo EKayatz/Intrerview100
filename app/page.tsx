@@ -37,8 +37,6 @@ const Home = async ({ searchParams: { category, endcursor } }: Props) => {
       endcursor
     )) as QuestionSearch;
 
-    console.log("questions:", data?.questionSearch?.pageInfo, "ende");
-
     const questionsToDisplay = data?.questionSearch?.edges || [];
     return (
       <section className="flexStart flex-col paddings mb-16">

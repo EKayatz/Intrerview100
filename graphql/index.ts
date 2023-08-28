@@ -47,6 +47,7 @@ export const createUserMutation = `
 				name
 				email
 				avatarUrl
+        bannerUrl
 				description
 				githubUrl
 				linkedinUrl
@@ -63,6 +64,7 @@ export const updateUserMutation = `
 				name
 				email
 				avatarUrl
+        bannerUrl
 				description
 				githubUrl
 				linkedinUrl
@@ -123,6 +125,7 @@ export const getUserQuery = `
       name
       email
       avatarUrl
+      bannerUrl
       description
       githubUrl
       linkedinUrl
@@ -138,6 +141,7 @@ query getUserQuestions($id: ID!, $last: Int = 4) {
     email
     description
     avatarUrl
+    bannerUrl
     githubUrl
     linkedinUrl
     questions(last: $last) {

@@ -22,7 +22,7 @@ const EditProfile = ({ session, user }: Props) => {
     avatarUrl: user?.avatarUrl || "",
     githubUrl: user?.githubUrl || "",
     linkedinUrl: user?.linkedinUrl || "",
-    // bannerUrl: user?.bannerUrl || "",
+    bannerUrl: user?.bannerUrl || "",
   });
 
   const handleStateChange = (fieldName: keyof UserForm, value: string) => {
@@ -73,13 +73,13 @@ const EditProfile = ({ session, user }: Props) => {
         setState={(value) => handleStateChange("avatarUrl", value)}
       />
 
-      {/* <FormField
+      <FormField
         title="Banner URL"
         state={form.bannerUrl}
         required={false}
         placeholder="Banner Url"
         setState={(value) => handleStateChange("bannerUrl", value)}
-      /> */}
+      />
 
       <FormField
         title="Github URL"
